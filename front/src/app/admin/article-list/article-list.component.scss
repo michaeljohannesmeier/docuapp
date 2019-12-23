@@ -1,0 +1,33 @@
+
+
+.add-button{
+    margin-bottom: 40px;
+    width: 150px;
+    min-width: 150px;
+}
+.button-right {
+    margin-left: 10px;
+}
+
+.article-wrapper {
+    cursor: pointer;
+    margin: 0px auto;
+    display: flex;
+    border-bottom: 1px solid grey;
+    .category1 {
+        width: 300px;
+        padding: 10px 0px;
+    }
+    .category2 {
+        width: 300px;
+        padding: 10px 0px;
+    }
+    .title {
+        width: 500px;
+        padding: 10px 0px;
+    }
+    &:hover {
+        background-color: lightgrey;
+    }
+}
+

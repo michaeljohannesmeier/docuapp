@@ -1,0 +1,92 @@
+
+
+<form *ngIf="loaded" [formGroup]="articleFormGroup" class="content-wrapper">
+
+    <div class="header-buttons">
+        <div>
+            <button class="header-button" color="primary" mat-raised-button type="button" routerLink="/admin/articles">View all articles</button>
+            <button *ngIf="onlyManageCategories" class="header-button button-right" color="accent" mat-raised-button type="button" (click)="changeOnlyManageCategories()">Add new article</button>
+        </div>
+        <button *ngIf="!onlyManageCategories && editModus" (click)="onDeleteArticle()" class="header-button" color="warn" mat-raised-button type="button">Delete article</button>
+    </div>
+
+    <div class="categories-wrapper">
+
+        <!--Manage category and add article-->
+        <mat-form-field class="categories" >
+            <mat-select placeholder="Category 1" formControlName="category1_id" (selectionChange)="setCategory2s()">
+                <mat-option *ngFor="let category1 of categories$ | async" [value]="category1.id">
+                {{category1.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="add-category-butts">
+            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory1Dialog(true)">Edit</button>
+            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory1Dialog(false)">+</button>
+            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="removeCategory1Dialog()">-</button>
+        </div>
+
+        <div class="margin-categories"></div>
+
+        <mat-form-field class="categories">
+            <mat-select placeholder="Category 2" formControlName="category2_id" #cat2>
+                <mat-option *ngFor="let category2 of category2s" [value]="category2.id">
+                    {{category2.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="add-category-butts">
+            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory2Dialog(true)">Edit</button>
+            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory2Dialog(false)">+</button>
+            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="removeCategory2Dialog(cat2)">-</button>
+        </div>
+
+    </div>
+
+    <!-- add article -->
+    <div *ngIf="!onlyManageCategories">
+
+        <div class="input-wrapper">
+            <mat-form-field class="input-title">
+                <input formControlName="title" matInput placeholder="Title" value="{{articleFormGroup.value.title}}">
+            </mat-form-field>
+        </div>
+
+
+        <div formArrayName="examples">
+            <div class="example-wrapper" *ngFor="let example of articleFormGroup.controls.examples.controls; let i = index">
+
+                <div class="example-headline">
+                    <div>Example {{i + 1 }}</div>
+                    <button class="remove-button" mat-button type="button" *ngIf="i > 0" (click)="deleteExample(i)">Delete</button>
+                </div>
+
+                <div [formGroupName]="i">
+
+                        <mat-form-field class="input-code">
+                                <textarea formControlName="text" rows="10" matInput placeholder="Text" [value]="example.value.text"></textarea>
+                            </mat-form-field>
+     
+                        <!--<ckeditor [config]="{ htmlEncodeOutput: false, entities: false}" formControlName="text" [editor]="Editor" [data]="example.value.text"></ckeditor>-->
+
+                        <mat-form-field class="input-code">
+                            <textarea formControlName="code" rows="10" matInput placeholder="Code" [value]="example.value.code"></textarea>
+                        </mat-form-field>
+                        <!--<ckeditor [config]="{ htmlEncodeOutput: false, entities: false}" formControlName="code" [editor]="Editor" [data]="example.value.code"></ckeditor>-->
+                </div>
+
+            </div>
+        </div>
+
+        <div class="add-example-button">
+            <button color="primary" mat-raised-button type="button" (click)="addExample()">Add example</button>
+        </div>
+
+        <div>
+            <button [disabled]="!articleFormGroup.valid" class="add-buttons" (click)="onSubmit()" color="accent" mat-raised-button type="button">{{editModus ? 'Update' : 'Add' }} article</button>
+        </div>
+    </div>
+
+</form>

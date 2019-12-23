@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d7591dec-18fa-4ff7-b3b1-fba051861252" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/ExampleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/ArticlePost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category2Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/Category2Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/Category2Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/interfaces/codeExample.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/interfaces/codeSnippet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/interfaces/codeSnippet.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/styles.scss" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Uz6umSbx354hJYLYdTo8Mw38R1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.docuapp.back.repositories" />
+      <recent name="com.docuapp.back.entities" />
+      <recent name="com.docuapp.back.controllers" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="BackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.docuapp.back.BackApplication" />
+      <module name="back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.docuapp.back.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BackApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7591dec-18fa-4ff7-b3b1-fba051861252" name="Default Changelist" comment="" />
+      <created>1576347301493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576347301493</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+
+
+<div class="background">
+
+    <div *ngFor="let category1 of categories$ | async">
+        <button mat-button yPosition="below" [matMenuTriggerFor]="subcat1">{{category1.name}}</button>
+        <mat-menu #subcat1="matMenu">
+            <div *ngFor="let category2 of category1.category2">
+            <button mat-menu-item [matMenuTriggerFor]="subcat2">{{category2.name}}</button>
+            <mat-menu #subcat2="matMenu">
+                    <button routerLink="/article/{{article.id}}" *ngFor="let article of category2.article" mat-menu-item>{{article.title}} -- {{article.id}}</button>
+            </mat-menu>
+            </div>
+        </mat-menu>
+    </div>
+
+    <button mat-button routerLink="/admin/articles">Admin</button>
+
+</div>
