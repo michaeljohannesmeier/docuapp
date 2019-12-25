@@ -1,6 +1,75 @@
 
 
 
-<app-header></app-header>
-<router-outlet></router-outlet>
+
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="app-name">Peace of Code</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="sidenav-container"
+                            [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                        [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+
+            <mat-nav-list *ngIf="!adminSection" class="nav-list">
+                <div *ngIf="categoryNumber == 1">
+                    <a mat-list-item (click)="onClickCategory(2, category1.name)" *ngFor="let category1 of categories$ | async">
+                        <div>{{category1.name}}</div>
+                        <i class="material-icons">arrow_right</i>
+                    </a>
+                </div>
+                <div *ngIf="categoryNumber == 2">
+                    <a mat-list-item (click)="menuBackTo(1)"><i class="material-icons">arrow_back</i></a>
+                    <a mat-list-item (click)="onClickCategory(3, category2.name)" *ngFor="let category2 of category2s">
+                        <div>{{category2.name}}</div>
+                        <i class="material-icons">arrow_right</i>
+                    </a>
+                </div>
+                <div *ngIf="categoryNumber == 3">
+                    <a mat-list-item (click)="menuBackTo(2)"><i class="material-icons">arrow_back</i></a>
+                    <a routerLink="/article/{{article.id}}" mat-list-item *ngFor="let article of articles">{{article.title}}</a>
+                </div>
+            </mat-nav-list>
+
+
+
+            <mat-nav-list *ngIf="adminSection" class="nav-list">
+                <div *ngIf="categoryNumber == 1">
+                    <a mat-list-item routerLink="/admin/articles">View articles</a>
+                    <a mat-list-item routerLink="/admin/articledetail" (click)="changeOnlyManageCategories(false)">Add new article</a>
+                    <a mat-list-item routerLink="/admin/articledetail" (click)="changeOnlyManageCategories(true)"[queryParams]="{ manage: true }">Manage categories</a>
+                    <a mat-list-item (click)="onClickCategoryAdmin(2)">Reorder</a>
+                    <a mat-list-item routerLink="/">View page</a>
+                </div>
+                <div *ngIf="categoryNumber == 2">
+                    <a class="list-item" mat-list-item (click)="menuBackTo(1)">Back</a>
+                    <a mat-list-item routerLink="/">Category1</a>
+                    <a mat-list-item (click)="onClickCategoryAdmin(31)">Category2</a>
+                    <a mat-list-item (click)="onClickCategoryAdmin(32)">Article</a>
+                </div>
+                <div *ngIf="categoryNumber == 31">
+                    <a class="list-item" mat-list-item (click)="menuBackTo(2)">Back</a>
+                    <a class="list-item" mat-list-item *ngFor="let category1 of categories$ | async">{{category1.name}}</a>
+                </div>
+                <div *ngIf="categoryNumber == 32">
+                    <a class="list-item" mat-list-item (click)="menuBackTo(2)">Back</a>
+                    <a class="list-item" mat-list-item (click)="onClickCategoryAdmin(4, category1.name)" *ngFor="let category1 of categories$ | async">{{category1.name}}</a>
+                </div>
+                <div *ngIf="categoryNumber == 4">
+                    <a class="list-item" mat-list-item (click)="menuBackTo(32)">Back</a>
+                    <a class="list-item" mat-list-item *ngFor="let category2 of category2s">{{category2.name}}</a>
+                </div>
+            </mat-nav-list>
+
+        </mat-sidenav>
+    
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+
 

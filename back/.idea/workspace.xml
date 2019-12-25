@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7591dec-18fa-4ff7-b3b1-fba051861252" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/ExampleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/controllers/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/ArticlePost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Category2Post.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/entities/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/Category2Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuapp/back/repositories/Category2Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-list/article-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-list/article-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/interfaces/codeExample.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/interfaces/codeSnippet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/interfaces/codeSnippet.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/services/central.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/services/central.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,6 +40,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

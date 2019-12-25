@@ -11,10 +11,22 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+// global content wrapper
 .content-wrapper {
     margin: 30px auto;
     width: 80%;
 }
+
+// headers
+.background-header {
+    height: 70px;
+    width: 100%;
+    background-color: orange;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
 
 
 

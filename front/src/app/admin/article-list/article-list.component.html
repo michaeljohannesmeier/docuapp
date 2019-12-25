@@ -4,9 +4,6 @@
 
 <div class="content-wrapper">
 
-    <button class="add-button" color="primary" mat-raised-button type="button" routerLink="/admin/articledetail">Add new article</button>
-    <button class="add-button button-right" color="primary" mat-raised-button type="button" routerLink="/admin/articledetail" [queryParams]="{ manage: true }" >Manage categories</button>
-
     <div [routerLink]="['/admin/articledetail']" [queryParams]="{ id: article.id }" class="article-wrapper" *ngFor="let article of articles$ | async">
         <div class="category1">{{article.category1_name}}</div>
         <div class="category2">{{article.category2_name}}</div>

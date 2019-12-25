@@ -3,12 +3,9 @@
 <form *ngIf="loaded" [formGroup]="articleFormGroup" class="content-wrapper">
 
     <div class="header-buttons">
-        <div>
-            <button class="header-button" color="primary" mat-raised-button type="button" routerLink="/admin/articles">View all articles</button>
-            <button *ngIf="onlyManageCategories" class="header-button button-right" color="accent" mat-raised-button type="button" (click)="changeOnlyManageCategories()">Add new article</button>
-        </div>
         <button *ngIf="!onlyManageCategories && editModus" (click)="onDeleteArticle()" class="header-button" color="warn" mat-raised-button type="button">Delete article</button>
     </div>
+
 
     <div class="categories-wrapper">
 
@@ -22,9 +19,9 @@
         </mat-form-field>
 
         <div class="add-category-butts">
-            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory1Dialog(true)">Edit</button>
-            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory1Dialog(false)">+</button>
-            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="removeCategory1Dialog()">-</button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="addOrUpdateCategory1Dialog(true)"><mat-icon>edit</mat-icon></button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="addOrUpdateCategory1Dialog(false)"><mat-icon>add</mat-icon></button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="removeCategory1Dialog(cat1)"><mat-icon>remove</mat-icon></button>
         </div>
 
         <div class="margin-categories"></div>
@@ -38,9 +35,9 @@
         </mat-form-field>
 
         <div class="add-category-butts">
-            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory2Dialog(true)">Edit</button>
-            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="addOrUpdateCategory2Dialog(false)">+</button>
-            <button class="add-category-butt" color="primary" mat-raised-button type="button" (click)="removeCategory2Dialog(cat2)">-</button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="addOrUpdateCategory2Dialog(true)"><mat-icon>edit</mat-icon></button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="addOrUpdateCategory2Dialog(false)"><mat-icon>add</mat-icon></button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="removeCategory2Dialog(cat2)"><mat-icon>remove</mat-icon></button>
         </div>
 
     </div>
@@ -66,13 +63,13 @@
                 <div [formGroupName]="i">
 
                         <mat-form-field class="input-code">
-                                <textarea formControlName="text" rows="10" matInput placeholder="Text" [value]="example.value.text"></textarea>
-                            </mat-form-field>
+                            <textarea formControlName="text" matTextareaAutosize matAutosizeMinRows=2 matInput placeholder="Text" [value]="example.value.text"></textarea>
+                        </mat-form-field>
      
                         <!--<ckeditor [config]="{ htmlEncodeOutput: false, entities: false}" formControlName="text" [editor]="Editor" [data]="example.value.text"></ckeditor>-->
 
                         <mat-form-field class="input-code">
-                            <textarea formControlName="code" rows="10" matInput placeholder="Code" [value]="example.value.code"></textarea>
+                            <textarea formControlName="code" matTextareaAutosize matAutosizeMinRows=2 matInput placeholder="Code" [value]="example.value.code"></textarea>
                         </mat-form-field>
                         <!--<ckeditor [config]="{ htmlEncodeOutput: false, entities: false}" formControlName="code" [editor]="Editor" [data]="example.value.code"></ckeditor>-->
                 </div>

@@ -46,7 +46,7 @@ testem.log
 Thumbs.db
 
 # own
-/application.properties
+application.properties
 /back/target
 /front/dist
-/dbbackups
+/back/dbbackups

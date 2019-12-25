@@ -11,12 +11,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatListModule} from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
 import { ArticleDetailComponent } from './admin/article-detail/article-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ArticleListComponent } from './admin/article-list/article-list.component';
@@ -30,6 +33,7 @@ import { RemoveArticle } from './admin/article-detail/dialogs/remove-article.dia
 import { DetailArticleComponent } from './detail-article/detail-article.component';
 
 import { HighlightModule } from 'ngx-highlightjs';
+import { UnsavedChangesGuard } from './guards/unsaved-changes.guard';
 
 
 
@@ -38,7 +42,6 @@ import { HighlightModule } from 'ngx-highlightjs';
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
     ArticleDetailComponent,
     ArticleListComponent,
     AddCategory1,
@@ -46,7 +49,7 @@ import { HighlightModule } from 'ngx-highlightjs';
     AddCategory2,
     RemoveCategory2,
     RemoveArticle,
-    DetailArticleComponent
+    DetailArticleComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,9 @@ import { HighlightModule } from 'ngx-highlightjs';
     MatListModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
     HighlightModule
   ],
   entryComponents: [
@@ -72,7 +78,7 @@ import { HighlightModule } from 'ngx-highlightjs';
     RemoveCategory2,
     RemoveArticle
   ],
-  providers: [],
+  providers: [UnsavedChangesGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

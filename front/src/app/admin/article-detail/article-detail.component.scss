@@ -3,7 +3,7 @@
 
 .header-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 50px;
     .header-button {
         width: 150px;
@@ -36,6 +36,11 @@ form {
                 min-width: 1px;
                 width: 20px;
                 padding: 0px;
+                mat-icon {
+                    font-size: 16px;
+                    height: 16px;
+                    width: 16px;
+                }
             }
             ::ng-deep .mat-raised-button {
                 line-height: 5px !important;

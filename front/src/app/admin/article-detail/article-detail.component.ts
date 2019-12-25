@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { CentralService } from 'src/app/services/central.service';
 import { Observable, combineLatest } from 'rxjs';
 import { withLatestFrom } from 'rxjs/operators';
@@ -14,13 +14,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { RemoveArticle } from './dialogs/remove-article.dialog';
+import { ComponentCanDeactivate } from 'src/app/guards/unsaved-changes.guard';
 
 @Component({
   selector: 'app-article-detail',
   templateUrl: './article-detail.component.html',
   styleUrls: ['./article-detail.component.scss']
 })
-export class ArticleDetailComponent implements OnInit {
+export class ArticleDetailComponent implements OnInit, ComponentCanDeactivate {
 
   categories$: Observable<any>;
   category2s: any = [];
@@ -42,6 +43,16 @@ export class ArticleDetailComponent implements OnInit {
               private fb: FormBuilder) { }
 
   ngOnInit() {
+
+    // subscribe to changes from menu when changing from manage categories to add article
+    this.cS.changeOnlyManageCategories$.subscribe(isOnlyManage => {
+        this.onlyManageCategories = isOnlyManage;
+    
+        // if on page article detail with id (edit article) and click on add new article
+        if(isOnlyManage || this.id) {
+          this.initDefaultFormGroup();
+        }
+    })
 
     this.categories$ = this.cS.categories$;
     combineLatest(this.categories$, this.route.queryParams).subscribe(([cats, params]) => {
@@ -92,7 +103,9 @@ export class ArticleDetailComponent implements OnInit {
             this.loaded = true;
           })
         } else {
-          this.initDefaultFormGroup();
+          if(!this.articleFormGroup) {
+            this.initDefaultFormGroup();
+          }
           this.loaded = true;
           this.setCategory2s();
         }
@@ -101,25 +114,19 @@ export class ArticleDetailComponent implements OnInit {
   }
 
   initDefaultFormGroup() {
-    if(!this.articleFormGroup) {
-      this.articleFormGroup = this.fb.group({
-        category1_id: ['', [Validators.required]],
-        category2_id: ['', [Validators.required]],
-        title: ['', [Validators.required]],
-        examples: this.fb.array([
-          this.fb.group({
-            text: ['', [Validators.required]],
-            code: ['', []]
-          })
-        ])
-      });
-    }
-  }
 
-  changeOnlyManageCategories() {
-    this.onlyManageCategories = false;
-    this.initDefaultFormGroup();
-    this.editModus = false;
+    this.articleFormGroup = this.fb.group({
+      category1_id: ['', [Validators.required]],
+      category2_id: ['', [Validators.required]],
+      title: ['', [Validators.required]],
+      examples: this.fb.array([
+        this.fb.group({
+          text: ['', [Validators.required]],
+          code: ['', []]
+        })
+      ])
+    });
+    
   }
 
   // update category2s depending on selection of category1 and set ategory2_id to undefined
@@ -160,6 +167,7 @@ export class ArticleDetailComponent implements OnInit {
       reqBody = {category1, category2_id, title, example};
     }
     this.cS.addOrUpdate(reqBody).subscribe(response => {
+        this.initDefaultFormGroup();  // to set touched of form to false
         this.router.navigate(['/admin/articles']);
         this._snackBar.open(`Article ${this.editModus ? 'updated' : 'saved'}`, 'OK', {
             duration: 8000,
@@ -177,6 +185,12 @@ export class ArticleDetailComponent implements OnInit {
           }
       });
   } 
+
+
+  @HostListener("window:beforeunload")  
+  componentCanDeactivate() {
+    return !this.articleFormGroup.touched;
+  }
 
 
 
@@ -312,6 +326,8 @@ export class ArticleDetailComponent implements OnInit {
     });
     }
   }
+
+
 
   
 

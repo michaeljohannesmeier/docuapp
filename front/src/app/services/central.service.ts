@@ -12,8 +12,10 @@ export class CentralService {
   constructor(private http: HttpClient ) {}
 
   private categories: any = new BehaviorSubject([]);
+  private changeOnlyManageCategoriesSub = new BehaviorSubject(false)
 
   categories$: Observable<any> = this.categories.asObservable();
+  changeOnlyManageCategories$: Observable<boolean> = this.changeOnlyManageCategoriesSub.asObservable();
 
   getCategories() {
     this.http.get(`${environment.apiEndpoint}/categories`).subscribe(response => {
@@ -51,6 +53,10 @@ export class CentralService {
 
   removeCategory2(id) {
     return this.http.delete(`${environment.apiEndpoint}/category2/${id}`);
+  }
+
+  changeOnlyManageCategories(isOnlyManage) {
+    this.changeOnlyManageCategoriesSub.next(isOnlyManage);
   }
 
 
