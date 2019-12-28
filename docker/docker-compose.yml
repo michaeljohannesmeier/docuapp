@@ -1,0 +1,40 @@
+version: "3"
+services:
+  # DB *****************************************
+  postgres:
+    build: ./postgres
+    container_name: postgres
+    volumes:
+      - postgres-data:/data
+    expose:
+    - 5434
+    ports:
+      - 5434:5432
+    env_file: .env.db
+    restart: unless-stopped
+# BACK *****************************************
+  back:
+    build: ./back
+    container_name: back
+    env_file: .env
+    ports:
+      - 9090:9090
+    expose:
+      - 9090
+    depends_on:
+      - postgres
+    links:
+      - postgres
+# FRONT *****************************************
+  front:
+    build:
+      ./front
+    container_name: front
+    ports: 
+      - 4200:80
+    expose:
+      - 80
+    depends_on:
+      - back
+volumes:
+  postgres-data:

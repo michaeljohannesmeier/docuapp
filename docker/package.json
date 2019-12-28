@@ -1,0 +1,11 @@
+{
+  "name": "docuapp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "rsync -a --delete-before /Users/andreabaez/Desktop/Barbudo/Programming/Projects/docuapp/docker/ root@46.101.137.166:/root/docuapp && ssh root@46.101.137.166 'docker-compose -f /root/docuapp/docker-compose.yml down' && ssh root@46.101.137.166 'docker-compose -f /root/docuapp/docker-compose.yml up --build -d'"
+  },
+  "author": "",
+  "license": "ISC"
+}
