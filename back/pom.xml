@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.docuapp</groupId>
 	<artifactId>back</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>back</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -79,8 +79,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- package with mvn clean package spring-boot:repackage -->
+					<outputDirectory>/Users/andreabaez/Desktop/Barbudo/Programming/Projects/docuapp/docker/app/target</outputDirectory>
+				</configuration>
 			</plugin>
 		</plugins>
+
 	</build>
 
 </project>

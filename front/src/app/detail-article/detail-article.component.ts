@@ -18,8 +18,9 @@ export class DetailArticleComponent implements OnInit {
   ngOnInit() {
 
     this.route.params.subscribe( params =>  {
-      this.cS.getArticle(params['id']).subscribe(article => {
+      this.cS.getArticle(params['id']).subscribe((article:any) => {
         this.article = article;
+        this.cS.setArticleId(article.id);
       });
       })
     

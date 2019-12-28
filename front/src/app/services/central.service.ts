@@ -13,9 +13,11 @@ export class CentralService {
 
   private categories: any = new BehaviorSubject([]);
   private changeOnlyManageCategoriesSub = new BehaviorSubject(false)
+  private articleId = new BehaviorSubject(null);
 
   categories$: Observable<any> = this.categories.asObservable();
   changeOnlyManageCategories$: Observable<boolean> = this.changeOnlyManageCategoriesSub.asObservable();
+  articleId$:Observable<number> = this.articleId.asObservable();
 
   getCategories() {
     this.http.get(`${environment.apiEndpoint}/categories`).subscribe(response => {
@@ -57,6 +59,11 @@ export class CentralService {
 
   changeOnlyManageCategories(isOnlyManage) {
     this.changeOnlyManageCategoriesSub.next(isOnlyManage);
+  }
+
+  setArticleId(id: number) {
+    console.log(id);
+    this.articleId.next(id);
   }
 
 

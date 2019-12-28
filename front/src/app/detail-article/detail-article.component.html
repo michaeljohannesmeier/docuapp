@@ -1,6 +1,6 @@
 
 <div class="content-wrapper">
-    <div class="top-menu">{{article?.category1_name}} -- {{article?.category2_name}}</div>
+    <div class="top-menu">{{article?.category1_name}}<span class="divider">|</span>{{article?.category2_name}}</div>
 
     <div class="title">{{article?.title}}</div>
 
@@ -10,7 +10,7 @@
         </div>
 
         <div *ngIf="example.code != ''" class="code-wrapper">
-            <pre><code class="code" [languages]="['javascript']" highlight='{{example.code}}'></code></pre>
+            <pre><code class="code" [languages]="['javascript', 'python']" highlight='{{example.code}}'></code></pre>
         </div>
 
     </div>

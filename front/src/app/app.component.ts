@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CentralService } from './services/central.service';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
 
@@ -20,8 +20,13 @@ export class AppComponent implements OnInit {
   categories: any;
   category2s: any;
   articles: any;
+  id: number;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private cService: CentralService, private router: Router) {
+  constructor(
+      changeDetectorRef: ChangeDetectorRef,
+      media: MediaMatcher, private cService: CentralService,
+      private router: Router,
+      private route: ActivatedRoute) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -33,6 +38,13 @@ export class AppComponent implements OnInit {
     this.categories$.subscribe(cats => {
       this.categories = cats;
     })
+
+    this.cService.articleId$.subscribe(id => {
+      console.log(id)
+      this.id = id;
+    })
+    
+
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd ) {
         if (event.url.includes('/admin/')) {
@@ -60,7 +72,11 @@ export class AppComponent implements OnInit {
   }
 
 
-
+  toggleMenu(snav, mobile) {
+    if(mobile) {
+      snav.toggle();
+    }
+  }
 
 
 

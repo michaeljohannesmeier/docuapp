@@ -49,4 +49,7 @@ Thumbs.db
 application.properties
 /back/target
 /front/dist
-/back/dbbackups
+/docker/postgres/dbbackups
+/cert
+/docker/.env
+/docker/.env.db

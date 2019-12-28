@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './theme.css';
 @import '~highlight.js/styles/github.css';
+
 
 html, body { 
     height: 100%;
@@ -17,15 +18,8 @@ body {
     width: 80%;
 }
 
-// headers
-.background-header {
-    height: 70px;
-    width: 100%;
-    background-color: orange;
-    color: black;
-    display: flex;
-    align-items: center;
-}
+
+
 
 
 

@@ -58,6 +58,7 @@ export class ArticleDetailComponent implements OnInit, ComponentCanDeactivate {
     combineLatest(this.categories$, this.route.queryParams).subscribe(([cats, params]) => {
       this.categories = cats;
       this.id = params['id'];
+
       if(!this.loaded) {
         this.onlyManageCategories = <boolean>params['manage']
       }
@@ -192,6 +193,11 @@ export class ArticleDetailComponent implements OnInit, ComponentCanDeactivate {
     return !this.articleFormGroup.touched;
   }
 
+
+  // TODO: only workaround here
+  get examplesFormData() { 
+    return <FormArray>this.articleFormGroup.controls.examples;
+  }
 
 
   // DIALOGS

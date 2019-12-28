@@ -5,7 +5,7 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
     <mat-toolbar color="primary" class="toolbar">
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <h1 class="app-name">Peace of Code</h1>
+        <img routerLink="/" src="../assets/logo_red_bg.jpg" class="app-logo" />
     </mat-toolbar>
 
     <mat-sidenav-container class="sidenav-container"
@@ -29,7 +29,7 @@
                 </div>
                 <div *ngIf="categoryNumber == 3">
                     <a mat-list-item (click)="menuBackTo(2)"><i class="material-icons">arrow_back</i></a>
-                    <a routerLink="/article/{{article.id}}" mat-list-item *ngFor="let article of articles">{{article.title}}</a>
+                    <a (click)="toggleMenu(snav, mobileQuery.matches)" [ngClass]="{'active-menu': article.id == id}" routerLink="/article/{{article.id}}" mat-list-item *ngFor="let article of articles">{{article.title}}</a>
                 </div>
             </mat-nav-list>
 

@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="back:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d7591dec-18fa-4ff7-b3b1-fba051861252" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/back_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-detail/article-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/admin/article-list/article-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/admin/article-list/article-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/header/header.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/app/services/central.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/services/central.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/app/detail-article/detail-article.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/app/detail-article/detail-article.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +39,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">

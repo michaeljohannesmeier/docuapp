@@ -19,11 +19,9 @@ export interface DialogData {
     selector: 'add-category2-dialog',
     templateUrl: 'add-category2.dialog.html',
     styles: [`
-    .name-input {
-        margin-left: 30px;
-    }
-    ckeditor ::ng-deep .ck-editor__editable_inline {
-        min-height: 100px;
+    form {
+        display: flex;
+        flex-direction: column;
     }`]
 })
 export class AddCategory2 implements OnInit {

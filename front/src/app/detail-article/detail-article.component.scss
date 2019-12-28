@@ -1,6 +1,14 @@
 
+@import '../../variables.scss';
 
 .top-menu {
+    color: $primary-color;
+    font-size: 18px;
+    border-bottom: 1px solid $primary-color;
+    .divider {
+        margin: 0px 10px;
+        font-weight: bold;
+    }
 }
 
 .title {

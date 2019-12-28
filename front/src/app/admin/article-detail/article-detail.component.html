@@ -9,7 +9,6 @@
 
     <div class="categories-wrapper">
 
-        <!--Manage category and add article-->
         <mat-form-field class="categories" >
             <mat-select placeholder="Category 1" formControlName="category1_id" (selectionChange)="setCategory2s()">
                 <mat-option *ngFor="let category1 of categories$ | async" [value]="category1.id">
@@ -21,7 +20,7 @@
         <div class="add-category-butts">
             <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="addOrUpdateCategory1Dialog(true)"><mat-icon>edit</mat-icon></button>
             <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="addOrUpdateCategory1Dialog(false)"><mat-icon>add</mat-icon></button>
-            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="removeCategory1Dialog(cat1)"><mat-icon>remove</mat-icon></button>
+            <button mat-raised-button class="add-category-butt" color="primary" type="button" (click)="removeCategory1Dialog()"><mat-icon>remove</mat-icon></button>
         </div>
 
         <div class="margin-categories"></div>
@@ -53,7 +52,7 @@
 
 
         <div formArrayName="examples">
-            <div class="example-wrapper" *ngFor="let example of articleFormGroup.controls.examples.controls; let i = index">
+            <div class="example-wrapper" *ngFor="let example of examplesFormData?.controls; let i = index">
 
                 <div class="example-headline">
                     <div>Example {{i + 1 }}</div>
